@@ -7,12 +7,13 @@ public_folder: assets
 
 collections:
   - name: Services
-    label: services
+    label: Services
     create: true
     folder: "content/home/services"
     fields:
       - { name: title, label: Title }
       - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
+      - { name: posttype, label: Posttype }
       # - { label: "Image", name: "image", widget: "image" }
   
