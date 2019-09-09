@@ -1,14 +1,15 @@
 backend:
   name: test-repo
+  repo: Lintachaudhari/gatsby-omniwyse
 
 media_folder: static/assets
 public_folder: assets
 
 collections:
   - name: About
-    label: a-bit-about-us
+    label: about
     create: true
-    folder: "content/about/a-bit-about-us"
+    folder: "content/about"
     fields:
       - { name: title, label: Title }
       - { name: date, label: Date, widget: date }
