@@ -6,12 +6,13 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: About
-    label: about
+  - name: Services
+    label: services
     create: true
-    folder: "content/about"
+    folder: "content/home/services"
     fields:
       - { name: title, label: Title }
       - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
       # - { label: "Image", name: "image", widget: "image" }
+  
