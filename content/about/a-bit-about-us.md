@@ -1,5 +1,5 @@
 ---
-title: "a bit aboyr us"
+title: "a bit about us"
 date: "2017-08-10"
 image: "./ab2.jpg"
 ---

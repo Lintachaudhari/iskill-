@@ -5,12 +5,12 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: blog
-    label: Blog
-    folder: blog
+  - name: About
+    label: a-bit-about-us
     create: true
+    folder: "content/about/a-bit-about-us"
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
+      - { label: "Image", name: "image", widget: "image" }
