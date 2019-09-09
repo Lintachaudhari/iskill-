@@ -1,7 +1,7 @@
 backend:
-  name: gatsby-omniwyse
+  name: test-repo
   branch: master
-
+  repo: Lintachaudhari/gatsby-omniwyse
 
 media_folder: static/assets
 public_folder: assets
