@@ -16,5 +16,14 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: body, label: Body, widget: markdown }
       - { name: posttype, label: Posttype }
-      # - { label: "Image", name: "image", widget: "image" }
+  - name: blog
+    label: Blog
+    folder: content/blog
+    create: true
+    fields:
+      - { name: posttype, label: Posttype }
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: description, label: Description }
+      - { name: body, label: Body, widget: markdown }
   

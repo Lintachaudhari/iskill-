@@ -33,11 +33,11 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    // const aboutPage = path.resolve("src/templates/about.js");
+    const aboutPage = path.resolve("src/templates/blog-post.js");
     const servicePage = path.resolve("src/templates/services.js");
-    if (node.frontmatter.posttype === 'about') {
+    if (node.frontmatter.posttype === 'blog') {
       createPage({
-        path: `/about${node.fields.slug}`,
+        path: `/blog${node.fields.slug}`,
         component: aboutPage,
         context: {
           slug:  node.fields.slug,
