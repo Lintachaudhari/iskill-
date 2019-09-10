@@ -1,31 +1,19 @@
-backend:
-  name: git-gateway
-  branch: master
-  repo: Lintachaudhari/gatsby-omniwyse
 
-media_folder: static/assets
-public_folder: assets
+backend:
+name: git-gateway
+branch: master
+
+media_folder: static/img
+public_folder: /img
 
 collections:
-  - name: Services
-    label: Services
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
     create: true
-    folder: "content/home/services"
     fields:
-      - { name: "posttype", label: "Posttype", widget: "string" }
-      - { name: "path", label: "Path", widget: "string" }
+     -  { label: "Posttype", name: "posttype", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
-      - { name: "date", label: "Date", widget: "date" }
-      - { name: "body", label: "Body", widget: "markdown" }
-  - name: blog
-    label: Blog
-    folder: content/blog
-    create: true
-    fields:
-      - { name: "posttype", label: "Posttype", widget: "string" }
-      - { name: "date", label: Date, widget: date }
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "description", label: "Description", widget: "string" }
-      - { name: "body", label: "Body", widget: "markdown" }
-  
-
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
