@@ -17,7 +17,6 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { name: "date", label: "Date", widget: "date" }
       - { name: "body", label: "Body", widget: "markdown" }
-     
   - name: blog
     label: Blog
     folder: content/blog
