@@ -10,10 +10,20 @@ collections:
     label: "Blog"
     folder: "content/blog"
     create: true
-    editor:
-     preview: false
     fields:
+      - { label: "Posttype", name: "posttype", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "service"
+    label: "Service"
+    folder: "content/home/services"
+    create: true
+    fields:
+      - { label: "Posttype", name: "posttype", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Heading", name: "heading", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
