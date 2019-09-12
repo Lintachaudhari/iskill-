@@ -6,10 +6,17 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
-      <div className="content-page">
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
+      <section class="container sub-services py-5">
+          <div className="">
+            <div className="service-heading text-center">
+                <h1>{post.frontmatter.title}</h1>
+                <p class="pt-5">{post.frontmatter.description}</p>
+            </div>
+            
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
+      </section>
+     
     </Layout>
   )
 }
@@ -20,6 +27,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        description
       }
     }
   }
