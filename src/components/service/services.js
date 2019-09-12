@@ -18,13 +18,6 @@ const Services =() =>(
                         date
                         heading
                         description
-                        image {
-                            childImageSharp {
-                                fluid(maxWidth: 2000) {
-                                  ...GatsbyImageSharpFluid
-                                }
-                              }
-                        }
                     }
                     fields {
                         slug
@@ -47,7 +40,7 @@ const Services =() =>(
                                     <div  className="col-md-4 text-center mb-4 home-service-main" key={i}>
                                         <div className="service-grid card">
                                             <div className="card-body">
-                                                <Img className="card-image" sizes={node.frontmatter.image.childImageSharp.fluid} />
+                                                {/* <Img className="card-image" sizes={node.frontmatter.image.childImageSharp.fluid} /> */}
                                                 <h3>{node.frontmatter.heading}</h3>
                                                 <p>{node.frontmatter.description}</p>
                                             <button className="button-save large">
