@@ -1,20 +1,22 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
+import { LandingBody } from "../components/styles/LandingBody"
 
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
       <section class="container sub-services py-5">
-          <div className="">
+          {/* <div className="">
             <div className="service-heading text-center">
                 <h1>{post.frontmatter.title}</h1>
                 <p class="pt-5">{post.frontmatter.description}</p>
             </div>
             
             <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </div>
+          </div> */}
+           <LandingBody dangerouslySetInnerHTML={{ __html: post.html }} />
       </section>
      
     </Layout>

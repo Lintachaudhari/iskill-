@@ -1,11 +1,12 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import Layout from "../components/layout/layout"
+import SEO from "../components/seo"
 import { Link } from "gatsby"
 
-const Blog =() =>(
-    <StaticQuery
-      query={graphql`
+const Blog = () => (
+  <StaticQuery
+    query={graphql`
       query {
         allMarkdownRemark(
             filter: {fileAbsolutePath: {regex: "//blog/"}}
@@ -27,24 +28,25 @@ const Blog =() =>(
           }
         }
       }
-      
       `}
 
     render={data => (
-      <div>
-              {data.allMarkdownRemark.edges.map(({node},i) => (
-              <div>
-                    <h3>{node.frontmatter.title}</h3>
-                    <button className="button-save large">
-                        <Link to={`/blog/${node.fields.slug}`} >
-                        Learn More
-                        </Link>
-                    </button>
-              </div>
-                ))}
-      </div>
+      <Layout>
+        <SEO title="All posts" />
+        <div>
+          {data.allMarkdownRemark.edges.map(({ node }, i) => (
+            <div>
+              <h3>
+                <Link to={`/blog/${node.fields.slug}`} >
+                  {node.frontmatter.title}
+                </Link>
+              </h3>
+            </div>
+          ))}
+        </div>
+      </Layout>
     )}
-/>
+  />
 )
 
 export default Blog

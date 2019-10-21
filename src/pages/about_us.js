@@ -3,42 +3,42 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import Img from "gatsby-image"
 import Team from "../components/team"
-export default ({data}) => {
-  return(
+import SEO from "../components/seo"
+export default ({ data }) => {
+  return (
     <Layout>
+      <SEO title="About Us" />
       <section>
-          <div className="container py-5">
-            {data.about.edges.map(({node}) => (
-              <div key={node.id}>
-                    <div dangerouslySetInnerHTML={{ __html: node.html }} />
-              </div>
-            ))}
-          </div>
+        <div className="container py-5">
+          {data.about.edges.map(({ node }) => (
+            <div key={node.id}>
+              <div dangerouslySetInnerHTML={{ __html: node.html }} />
+            </div>
+          ))}
+        </div>
 
-          <div className="plans-sec py-5">
-            {data.about_sub_section.edges.map(({node},i) => (
-              <div className="container" key={i}>
-                <div className="row">
-                    <div className="col-lg-6 col-md-6">
-                          <Img
-                              fluid={node.frontmatter.image.childImageSharp.fluid} />
-                    </div>
-                    <div className="col-lg-6 col-md-6">
-                        <div dangerouslySetInnerHTML={{ __html: node.html}}/>
-                    </div>
+        <div className="plans-sec py-5">
+          {data.about_sub_section.edges.map(({ node }, i) => (
+            <div className="container" key={i}>
+              <div className="row">
+                <div className="col-lg-6 col-md-6">
+                  <Img
+                    fluid={node.frontmatter.image.childImageSharp.fluid} />
+                </div>
+                <div className="col-lg-6 col-md-6">
+                  <div dangerouslySetInnerHTML={{ __html: node.html }} />
                 </div>
               </div>
-            ))}
-          </div>
-          <Team/>
-        
-
+            </div>
+          ))}
+        </div>
+        <Team />
       </section>
     </Layout>
   )
 }
 
-  
+
 
 export const query = graphql`
   query MyQuery {
