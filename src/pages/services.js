@@ -7,7 +7,7 @@ import Button from "../components/utils/Button"
 import ProjCycle from "../images/proj-cycle.png"
 import Footer from "../components/footer/footer"
 
-export default ({ data }) => {
+export default () => {
   return (
     <div>
       <Header></Header>
@@ -24,6 +24,7 @@ export default ({ data }) => {
           et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
           takimata sanctus est Lorem ipsum dolor sit amet
         </div>
+        <BuildYourTeam></BuildYourTeam>
 
         <div>
           <div>Platform</div>
@@ -39,62 +40,18 @@ export default ({ data }) => {
             </div>
           </div>
         </div>
-        <div>
-          <div>Platform</div>
-          <div style={{ display: "flex", flexWrap: "wrap" }}>
-            <div style={{ flexBasis: "25%" }}>
-              Lorem ipsum, or lipsum as it is sometimes known, is dummy text
-              used in laying out print, graphic or web designs. The passage is
-              attributed to an unknown typesetter. Lorem ipsum, or lipsum as it
-              is sometimes known, is dummy text used in laying out print,
-              graphic or web designs. The passage is attributed to an unknown
-              typesetter.
-            </div>
-            <img style={{ flexBasis: "10%" }} src={ProjCycle} />
-          </div>
-        </div>
+        <Button
+          title="Sign Up"
+          backGroundColor="#BC59A8"
+          border="1px solid #BC59A8"
+          height="36px"
+          borderRadius="3px"
+          color="#ffffff"
+          opacity={1}
+          title="Get Started"
+        />
       </div>
       <Footer></Footer>
     </div>
   )
 }
-
-export const query = graphql`
-  query MyQuery {
-    about: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//about/who-we-are[.]md/" } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date
-          }
-          html
-        }
-      }
-    }
-    about_sub_section: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//about/a-bit-about-us[.]md/" } }
-    ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
-            date
-            image {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          html
-        }
-      }
-    }
-  }
-`
