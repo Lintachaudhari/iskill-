@@ -1,0 +1,34 @@
+$white:#fff;
+$secondary:#BC59A8;
+
+
+.navbar-nav{
+    margin-left: 4vw
+}
+
+.fill-btn{
+    background-color: $secondary;
+    border: 1px solid $secondary;
+    color:$white;
+    border-radius: 3px;
+    padding: 5px 20px;
+}
+.outline-btn{
+    background-color: $white;
+    border: 1px solid $secondary;
+    color:$secondary;
+    border-radius: 3px;
+    padding: 5px 20px;
+}
+
+.navbar-nav a{
+    color: #707070;
+    font-weight: bold;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.navbar-nav a:hover{
+    color: $secondary;
+    text-decoration: none;
+}

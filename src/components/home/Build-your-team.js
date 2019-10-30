@@ -8,7 +8,7 @@ import SelectionIcon from "../../images/selection.svg"
 
 export default () => {
   return (
-    <div>
+    <div style={{padding:'40px 0'}}>
       <div style={{ display: "flex", flexWrap: "wrap", marginLeft: "100px" }}>
         <div
           style={{
@@ -42,13 +42,13 @@ export default () => {
             color: "#1847A1",
             opacity: 1,
             flexBasis: "200px",
+            padding: "20px",
           }}
         >
           <p
             style={{
               color: "#1847A1",
               opacity: 1,
-              font: "Bold 16px/24px Raleway",
             }}
           >
             Build Your Product
@@ -73,6 +73,9 @@ export default () => {
             width: "250px",
             color: "#1847A1",
             opacity: 1,
+            padding: "20px",
+            borderTopRightRadius: "50px",
+            background: "transparent linear-gradient(180deg, #874A9C 0%, #30479B 100%) 0% 0% no-repeat padding-box"
           }}
         >
           <p
@@ -97,6 +100,7 @@ export default () => {
             width: "345px",
             color: "#1847A1",
             opacity: 1,
+            padding: "20px",
           }}
         >
           <p
