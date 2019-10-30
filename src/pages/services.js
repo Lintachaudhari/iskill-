@@ -10,8 +10,8 @@ export default props => {
   return (
     <Layout>
       <Img fluid={props.data.services.childImageSharp.fluid} />
-      <div style={{ margin: "25px 150px" }}>
-        <div>
+      <div>
+        <div className="container">
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
           sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
@@ -24,11 +24,11 @@ export default props => {
         </div>
         <BuildYourTeam></BuildYourTeam>
 
-        <div>
+        <div className="container">
           <div>Platform</div>
           <div style={{ display: "flex", flexWrap: "wrap" }}>
-            <img style={{ flexBasis: "10%" }} src={ProjCycle} />
-            <div style={{ flexBasis: "25%" }}>
+            <img src={ProjCycle} className="img-fluid" />
+            <div>
               Lorem ipsum, or lipsum as it is sometimes known, is dummy text
               used in laying out print, graphic or web designs. The passage is
               attributed to an unknown typesetter. Lorem ipsum, or lipsum as it

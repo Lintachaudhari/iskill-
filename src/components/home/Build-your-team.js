@@ -8,7 +8,7 @@ import SelectionIcon from "../../images/selection.svg"
 
 export default () => {
   return (
-    <div style={{padding:'40px 0'}}>
+    <div style={{ padding: "40px 0" }}>
       <div style={{ display: "flex", flexWrap: "wrap", marginLeft: "100px" }}>
         <div
           style={{
@@ -75,12 +75,13 @@ export default () => {
             opacity: 1,
             padding: "20px",
             borderTopRightRadius: "50px",
-            background: "transparent linear-gradient(180deg, #874A9C 0%, #30479B 100%) 0% 0% no-repeat padding-box"
+            background:
+              "transparent linear-gradient(180deg, #874A9C 0%, #30479B 100%) 0% 0% no-repeat padding-box",
           }}
         >
           <p
             style={{
-              color: "#1847A1",
+              color: "#FFFFFF",
               opacity: 1,
               font: "Bold 16px/24px Raleway",
             }}
@@ -88,7 +89,7 @@ export default () => {
             Build your Team
           </p>
           <img style={{ width: "116px", height: "118px" }} src={TeamIcon} />
-          <p>
+          <p style={{ color: "#FFFFFF" }}>
             Get the best developers on your team; iSkyll gives a choice to pick
             and choose your team of specialists for your work.
           </p>
