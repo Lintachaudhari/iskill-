@@ -1,17 +1,15 @@
 import React from "react"
-import { Link } from "gatsby"
-import TechImage from "../images/services-1.png"
-import Header from "../components/header/header"
 import BuildYourTeam from "../components/home/Build-your-team"
 import Button from "../components/utils/Button"
 import ProjCycle from "../images/proj-cycle.png"
-import Footer from "../components/footer/footer"
+import Layout from "../components/layout/layout"
+import Img from "gatsby-image"
 
-export default () => {
+export default props => {
+  const { data } = props
   return (
-    <div>
-      <Header></Header>
-      <img src={TechImage} style={{ width: "100%" }} />
+    <Layout>
+      <Img fluid={props.data.services.childImageSharp.fluid} />
       <div style={{ margin: "25px 150px" }}>
         <div>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -51,7 +49,25 @@ export default () => {
           title="Get Started"
         />
       </div>
-      <Footer></Footer>
-    </div>
+    </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    projCycle: file(relativePath: { eq: "proj-cycle.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    services: file(relativePath: { eq: "services-1.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
