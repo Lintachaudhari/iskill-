@@ -11,6 +11,7 @@ import Services from "../components/service/services"
 import "../scss/main.scss"
 import ReasonsToIskyll from "../components/home/Reasons-to-Iskyll"
 import BuildYourTeam from "../components/home/Build-your-team"
+import NewIdeas from "../components/home/New-ideas"
 
 const IndexPage = () => (
   <StaticQuery
@@ -61,6 +62,7 @@ const IndexPage = () => (
         </section>
 
         <BuildYourTeam />
+        <NewIdeas />
       </Layout>
     )}
   />
