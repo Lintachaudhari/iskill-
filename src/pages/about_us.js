@@ -1,66 +1,76 @@
 import React from "react"
-import { Link } from "gatsby"
-import TechImage from "../images/services-1.png"
-import Header from "../components/header/header"
-import BuildYourTeam from "../components/home/Build-your-team"
-import Button from "../components/utils/Button"
 import ProjCycle from "../images/proj-cycle.png"
-import Footer from "../components/footer/footer"
+import Layout from "../components/layout/layout"
+import Img from "gatsby-image"
+import SEO from "../components/seo"
 
-export default ({ data }) => {
+export default props => {
+  console.log(props)
+  const { data } = props
   return (
-    <div>
-      <Header></Header>
-      <img src={TechImage} style={{ width: "100%" }} />
+    <Layout>
+      <SEO title="About Us" />
+      <Img fluid={props.data.services.childImageSharp.fluid} />
       <div style={{ margin: "25px 150px" }}>
         <div>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet
+          {data.about.edges.map(({ node }) => (
+            <div key={node.id}>
+              <div dangerouslySetInnerHTML={{ __html: node.html }} />
+            </div>
+          ))}
         </div>
 
         <div>
-          <div>Platform</div>
-          <div style={{ display: "flex", flexWrap: "wrap" }}>
-            <img style={{ flexBasis: "10%" }} src={ProjCycle} />
-            <div style={{ flexBasis: "25%" }}>
-              Lorem ipsum, or lipsum as it is sometimes known, is dummy text
-              used in laying out print, graphic or web designs. The passage is
-              attributed to an unknown typesetter. Lorem ipsum, or lipsum as it
-              is sometimes known, is dummy text used in laying out print,
-              graphic or web designs. The passage is attributed to an unknown
-              typesetter.
+          <h3 style={{ color: "#1847A1" }}>Platform</h3>
+          {data.about_sub_section.edges.map(({ node }, i) => (
+            <div className="container" key={i}>
+              <div className="row">
+                <div className="col-lg-6 col-md-6">
+                  <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
+                </div>
+                <div className="col-lg-6 col-md-6">
+                  <div dangerouslySetInnerHTML={{ __html: node.html }} />
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
         <div>
-          <div>Platform</div>
-          <div style={{ display: "flex", flexWrap: "wrap" }}>
-            <div style={{ flexBasis: "25%" }}>
-              Lorem ipsum, or lipsum as it is sometimes known, is dummy text
-              used in laying out print, graphic or web designs. The passage is
-              attributed to an unknown typesetter. Lorem ipsum, or lipsum as it
-              is sometimes known, is dummy text used in laying out print,
-              graphic or web designs. The passage is attributed to an unknown
-              typesetter.
+          <h3 style={{ color: "#1847A1" }}>Platform</h3>
+          {data.about_sub_section.edges.map(({ node }, i) => (
+            <div className="container" key={i}>
+              <div className="row">
+                <div className="col-lg-6 col-md-6">
+                  <div dangerouslySetInnerHTML={{ __html: node.html }} />
+                </div>
+                <div className="col-lg-6 col-md-6">
+                  <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
+                </div>
+              </div>
             </div>
-            <img style={{ flexBasis: "10%" }} src={ProjCycle} />
-          </div>
+          ))}
         </div>
       </div>
-      <Footer></Footer>
-    </div>
+    </Layout>
   )
 }
 
 export const query = graphql`
-  query MyQuery {
+  query {
+    projCycle: file(relativePath: { eq: "proj-cycle.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    services: file(relativePath: { eq: "services-1.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     about: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "//about/who-we-are[.]md/" } }
     ) {
