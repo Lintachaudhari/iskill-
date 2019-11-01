@@ -9,50 +9,15 @@ export default props => {
   const { data } = props
   return (
     <Layout>
-      <SEO title="About Us" />
+      <SEO title="Contact Us" />
       <div className="banner-set">
-        <div className="banner-title container">About Us</div>
+        <div className="banner-title container">Contact Us</div>
         <Img fluid={props.data.services.childImageSharp.fluid} />
       </div>
-      <div style={{ margin: "25px 150px" }}>
-        <div>
-          {data.about.edges.map(({ node }) => (
-            <div key={node.id}>
-              <div dangerouslySetInnerHTML={{ __html: node.html }} />
-            </div>
-          ))}
-        </div>
-
-        <div>
-          <h3 style={{ color: "#1847A1" }}>Platform</h3>
-          {data.about_sub_section.edges.map(({ node }, i) => (
-            <div className="container" key={i}>
-              <div className="row">
-                <div className="col-lg-6 col-md-6">
-                  <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
-                </div>
-                <div className="col-lg-6 col-md-6">
-                  <div dangerouslySetInnerHTML={{ __html: node.html }} />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div>
-          <h3 style={{ color: "#1847A1" }}>Platform</h3>
-          {data.about_sub_section.edges.map(({ node }, i) => (
-            <div className="container" key={i}>
-              <div className="row">
-                <div className="col-lg-6 col-md-6">
-                  <div dangerouslySetInnerHTML={{ __html: node.html }} />
-                </div>
-                <div className="col-lg-6 col-md-6">
-                  <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+      <div style={{ margin: "25px 150px", fontSize:'23px', lineHeight:'42px' }}>
+      Q2, A2, 7th Floor<br/>
+      Cyber Towers<br/>
+      Hi-tech City, Hyderabad 500081
       </div>
     </Layout>
   )

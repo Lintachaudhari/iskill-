@@ -1,8 +1,8 @@
 ---
-title: "slider1"
+title: "slider2"
 date: "2017-08-10"
 posttype: "slider"
-path: "/slider1"
+path: "/slider2"
 image: "./slider2.jpeg"
 ---
 

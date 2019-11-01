@@ -1,115 +1,109 @@
-@import 'node_modules/bootstrap/scss/bootstrap.scss';
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
 
-$white:#fff;
-$secondary:#BC59A8;
-
+$white: #fff;
+$secondary: #bc59a8;
 
 body {
-    margin:0;
-    padding:0;
-    height:100%;
-    font-family: 'Raleway', sans-serif!important;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Raleway", sans-serif !important;
+}
 
- }
- 
 .plans-sec {
-    background: #f6f6f6;
+  background: #f6f6f6;
 }
 
 p {
-    font-size:0.9em;
-    color: #777;
-    line-height: 1.9em;
-    letter-spacing: 1px;
+  font-size: 0.9em;
+  color: #777;
+  line-height: 1.9em;
+  letter-spacing: 1px;
 }
 
-
-.read-btn{
-    background: #feac00;
-    border: 2px solid #feac00;
-    color: #222;
-    cursor: pointer;
+.read-btn {
+  background: #feac00;
+  border: 2px solid #feac00;
+  color: #222;
+  cursor: pointer;
 }
-
 
 .flip-card {
-    width: 285px;
-    height: 45vh;
-    perspective: 1000px;
-    padding:5px;
-  }
-  
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-  }
-  
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-  }
-  
-  .flip-card-front {
-    background-color: white;
-    color: black;
-  }
-  
-  .flip-card-back {
-    background-color: #f6f6f6;
-    color: #777;
-    transform: rotateY(180deg);
-    padding:30px 20px;
-    text-align: justify;
-  }
+  width: 285px;
+  height: 45vh;
+  perspective: 1000px;
+  padding: 5px;
+}
 
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
-  .references__item:not(.big) {
-    width: 19.66667%;
-    opacity: .5;
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #f6f6f6;
+  color: #777;
+  transform: rotateY(180deg);
+  padding: 30px 20px;
+  text-align: justify;
+}
+
+.references__item:not(.big) {
+  width: 19.66667%;
+  opacity: 0.5;
 }
 
 .references__item {
-    display: inline-block;
-    padding: 15px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    opacity: .8;
-    transition: all .2s ease;
-    
+  display: inline-block;
+  padding: 15px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.2s ease;
 }
 
-.references__item:hover{
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-    opacity: 1;
+.references__item:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  opacity: 1;
 }
 // .references__item:not(.big) img {
 //     max-width: 90%;
 //     height: auto !important;
 // }
 
-.customers-image{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
+.customers-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-
-.customer-logo{
-  width:100%
+.customer-logo {
+  width: 100%;
 }
 table {
   border-collapse: collapse;
@@ -121,22 +115,22 @@ table {
 
 table caption {
   font-size: 1.5em;
-  margin: .5em 0 .75em;
+  margin: 0.5em 0 0.75em;
 }
 
 table tr {
-  padding: .35em;
+  padding: 0.35em;
 }
 
 table th,
 table td {
-  padding: .625em;
+  padding: 0.625em;
   text-align: center;
 }
 
 table th {
-  font-size: .85em;
-  letter-spacing: .1em;
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -148,7 +142,7 @@ table th {
   table caption {
     font-size: 1.3em;
   }
-  
+
   table thead {
     border: none;
     clip: rect(0 0 0 0);
@@ -159,17 +153,17 @@ table th {
     position: absolute;
     width: 1px;
   }
-  
+
   table tr {
     display: block;
-    margin-bottom: .625em;
+    margin-bottom: 0.625em;
   }
-  
+
   table td {
     display: block;
-    font-size: .8em;
+    font-size: 0.8em;
   }
-  
+
   table td::before {
     /*
     * aria-label has no advantage, it won't be read inside a table
@@ -180,32 +174,52 @@ table th {
     font-weight: bold;
     text-transform: uppercase;
   }
-  
+
   table td:last-child {
     border-bottom: 0;
   }
 }
 
-.header-shadow{
+.header-shadow {
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
-
 }
 
-.carousel-indicators li{
+.carousel-indicators li {
   width: 10px;
   height: 10px;
 }
 
-
-.carousel{
-  margin-top: 74px
+.carousel {
+  margin-top: 74px;
 }
 
-.byt-gray{
-  border: 1px solid #EBEBEB;
+.byt-gray {
+  border: 1px solid #ebebeb;
   border-radius: 3px;
   text-align: center;
   padding: 20px;
   margin-top: 50px;
-  background: linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(128, 128, 128, 0.10%) 100%) 0% 0% no-repeat padding-box padding-box transparent
+  background: linear-gradient(
+      rgba(255, 255, 255, 0) 0%,
+      rgba(128, 128, 128, 0.1%) 100%
+    )
+    0% 0% no-repeat padding-box padding-box transparent;
+}
+
+#content-wrap {
+  margin-top: 73px;
+}
+
+.banner-set {
+  position: relative;
+}
+
+.banner-title {
+  color: #fff;
+  font-size: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
 }
