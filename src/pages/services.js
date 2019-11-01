@@ -22,9 +22,9 @@ export default props => {
           et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
           takimata sanctus est Lorem ipsum dolor sit amet
         </div>
-        <BuildYourTeam></BuildYourTeam>
+        <BuildYourTeam id="buildTeam"></BuildYourTeam>
 
-        <div className="container">
+        <div className="container" id="platform">
           <div>Platform</div>
           <div style={{ display: "flex", flexWrap: "wrap" }}>
             <img src={ProjCycle} className="img-fluid" />
@@ -47,6 +47,7 @@ export default props => {
           color="#ffffff"
           opacity={1}
           title="Get Started"
+          id="getStarted"
         />
       </div>
     </Layout>

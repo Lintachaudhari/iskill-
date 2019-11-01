@@ -52,28 +52,38 @@ const Header = ({ siteTitle }) => (
                   <Link to="/about_us">About Us</Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/">Porgram</Link>
+                  <Link to="/program">Porgram</Link>
                 </Nav.Link>
-                <NavDropdown title='Services'> 
-                  <NavDropdown.Item href="#">Build Your Product</NavDropdown.Item>
-                  <NavDropdown.Item href="#">Build Your Team</NavDropdown.Item>
-                  <NavDropdown.Item href="#">Hire Your Team</NavDropdown.Item>
+                <NavDropdown title="Services">
+                  <NavDropdown.Item>
+                    <Link to="/services/#buildTeam"> Build Your Product</Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/services/#platform">Build Your Team</Link>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item>
+                    <Link to="/services/#getStarted">Hire Your Team</Link>
+                  </NavDropdown.Item>
                 </NavDropdown>
                 <Nav.Link>
-                  <Link to="/services">ReSkyll</Link>
+                  <Link to="/reskill">ReSkyll</Link>
                 </Nav.Link>
-                
+
                 <Nav.Link color="black">
                   <Link to="/contact_us">Contact Us</Link>
                 </Nav.Link>
               </Nav>
               <Form>
-                <button title="Sign Up" className="outline-btn">
-                  Sign Up
-                </button>
-                <button title="Sign In" className="fill-btn ml-3">
-                  Sign In
-                </button>
+                <Link to="/signup" style={{ color: `#0c2e8a` }}>
+                  <button title="Sign Up" className="outline-btn">
+                    Sign Up
+                  </button>
+                </Link>
+                <Link to="/singin" style={{ color: `#FFFFFF` }}>
+                  <button title="Sign In" className="fill-btn ml-3">
+                    Sign In
+                  </button>
+                </Link>
               </Form>
             </Navbar.Collapse>
           </Navbar>
