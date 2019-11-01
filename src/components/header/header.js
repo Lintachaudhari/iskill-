@@ -45,15 +45,9 @@ const Header = ({ siteTitle }) => (
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Nav.Link>
-                  <Link to="/">Home</Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/about_us">About Us</Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/program">Porgram</Link>
-                </Nav.Link>
+                <Link to="/" className='nav-link'>Home</Link>
+                <Link to="/about_us" className='nav-link'>About Us</Link>
+                <Link to="/program" className='nav-link'>Porgram</Link>
                 <NavDropdown title="Services">
                   <NavDropdown.Item>
                     <Link to="/services/#buildTeam"> Build Your Product</Link>
@@ -65,13 +59,8 @@ const Header = ({ siteTitle }) => (
                     <Link to="/services/#getStarted">Hire Your Team</Link>
                   </NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link>
-                  <Link to="/reskill">ReSkyll</Link>
-                </Nav.Link>
-
-                <Nav.Link color="black">
-                  <Link to="/contact_us">Contact Us</Link>
-                </Nav.Link>
+                <Link to="/reskyll" className='nav-link'>ReSkyll</Link>
+                <Link to="/contact_us" className='nav-link'>Contact Us</Link>
               </Nav>
               <Form>
                 <Link to="/signup" style={{ color: `#0c2e8a` }}>

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Omniwyse`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `iSkyll`,
+    description: `iSkyll is a Smart Development Service combining top developers to build a successful product. iSkyll is a new standard in product development `,
     author: `@gatsbyjs`,
   },
   plugins: [
