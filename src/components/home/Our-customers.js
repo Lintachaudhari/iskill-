@@ -31,7 +31,8 @@ const IndexPage = () => (
       }
     `}
     render={data => (
-      <div className="container text-center">
+      <div className=" text-center" style={{backgroundColor:'#F8F8F8', padding:'3vw 0'}}>
+        <div className="container">
         <h5 style={{ color: "#BD528E" }} className="heading mb-2">
           Our
         </h5>
@@ -47,6 +48,7 @@ const IndexPage = () => (
               />
             </a>
           ))}
+        </div>
         </div>
       </div>
     )}

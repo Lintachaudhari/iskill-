@@ -18,14 +18,16 @@ export default props => {
               color: "#FFFFFF",
               //marginLeft: "150px",
               font: "Bold 45px/53px",
-              width: "315px",
-              height: "53px",
+              marginTop:'2vw',
+              flex: '0 0 40%'
             }}
           >
-            5 Reasons To
-            <br /> <strong>choose ISkyll</strong>
+           <div>
+              5 Reasons To
+            </div>
+            <strong>choose ISkyll</strong>
           </h3>
-          <img src={SkillsImg} className="img-fluid" />
+          <img src={SkillsImg} className="img-fluid mx-auto" />
         </div>
       </div>
     </div>

@@ -13,15 +13,16 @@ export default props => {
             flexDirection: "column",
           }}
         >
-          <h3 style={{ color: "#1847A1" }}>Platform</h3>
           <div style={{ display: "flex" }}>
             <div
               style={{
-                flexBasis: "530px",
                 color: "#333333",
-                opacity: 1,
+                flex:'0 0 55%',
+                paddingRight:'2vw'
               }}
             >
+          <h3 style={{ color: "#1847A1", marginTop:'2vw' }}>Platform</h3>
+
               Lorem ipsum, or lipsum as it is sometimes known, is dummy text
               used in laying out print, graphic or web designs. The passage is
               attributed to an unknown typesetter.

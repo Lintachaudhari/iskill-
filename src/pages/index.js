@@ -8,6 +8,7 @@ import BuildYourTeam from "../components/home/Build-your-team"
 import NewIdeas from "../components/home/New-ideas"
 import Platform from "../components/home/Platform"
 import OurCustomers from "../components/home/Our-customers"
+import Testimonials from "../components/home/testimonials"
 
 export default props => (
   <Layout>
@@ -18,5 +19,6 @@ export default props => (
     <OurCustomers />
     <BuildYourTeam />
     <NewIdeas />
+    <Testimonials/>
   </Layout>
 )
