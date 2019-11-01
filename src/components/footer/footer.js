@@ -20,7 +20,7 @@ const Footer = () => {
     }
   `) */
   return (
-    <section style={{backgroundColor:'#F7F7F7', padding:'10px'}}>
+    <section style={{backgroundColor:'#F7F7F7', padding:'20px 0 0 0'}}>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <p>© 2019 Organization. All rights reserved | Design by Omniwyse</p>
       </div>
