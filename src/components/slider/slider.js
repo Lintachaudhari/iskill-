@@ -7,7 +7,7 @@ import "./slider.scss"
 const slidePages = {
   0: "program",
   1: "services",
-  2: "reskill",
+  2: "reskyll",
 }
 
 const Slider_Component = () => (
