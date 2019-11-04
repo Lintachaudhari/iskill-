@@ -14,7 +14,7 @@ export default props => {
         <div className="banner-title container">About Us</div>
         <Img fluid={props.data.services.childImageSharp.fluid} />
       </div>
-      <div style={{ margin: "25px 150px" }}>
+      <div className="container">
         <div>
           {data.about.edges.map(({ node }) => (
             <div key={node.id}>

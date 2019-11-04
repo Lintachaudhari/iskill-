@@ -8,7 +8,7 @@ export default props => {
   const { data } = props
   return (
     <Layout>
-      <SEO title="Re Skyll" />
+      <SEO title="Hire a iSkyll Grad" />
       <div className="banner-set">
         <div className="banner-title container">Hire Iskill Grad</div>
         <Img fluid={props.data.services.childImageSharp.fluid} />
@@ -18,9 +18,7 @@ export default props => {
           {data.hireIskillGrad.edges.map(({ node }, i) => (
             <div key={i}>
               <div className="row">
-                <div className="col-lg-6 col-md-6">
-                  <div dangerouslySetInnerHTML={{ __html: node.html }} />
-                </div>
+                <div dangerouslySetInnerHTML={{ __html: node.html }} />
               </div>
             </div>
           ))}

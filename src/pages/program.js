@@ -15,43 +15,15 @@ export default ({ data }) => {
         <div className="banner-title container">Program</div>
         <Img fluid={data.services.childImageSharp.fluid} />
       </div>
-      <div className="container">
+      <div className="container container-padding">
         {data.program.edges.map(({ node }, i) => (
           <div key={i}>
             <div className="row">
-              <div className="col-lg-6 col-md-6">
                 <div dangerouslySetInnerHTML={{ __html: node.html }} />
-              </div>
             </div>
           </div>
         ))}
       </div>
-      <BuildYourTeam id="buildTeam"></BuildYourTeam>
-
-      <div className="container" id="platform">
-        <div>Platform</div>
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
-          <img src={ProjCycle} className="img-fluid" alt="Project life cycle" />
-          <div>
-            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used
-            in laying out print, graphic or web designs. The passage is
-            attributed to an unknown typesetter. Lorem ipsum, or lipsum as it is
-            sometimes known, is dummy text used in laying out print, graphic or
-            web designs. The passage is attributed to an unknown typesetter.
-          </div>
-        </div>
-      </div>
-      <Button
-        title="Sign Up"
-        backGroundColor="#BC59A8"
-        border="1px solid #BC59A8"
-        height="36px"
-        borderRadius="3px"
-        color="#ffffff"
-        opacity={1}
-        title="Get Started"
-        id="getStarted"
-      />
     </Layout>
   )
 }
