@@ -10,12 +10,12 @@ export default props => {
     <Layout>
       <SEO title="Re Skyll" />
       <div className="banner-set">
-        <div className="banner-title container">ReSkyll</div>
+        <div className="banner-title container">Hire Iskill Grad</div>
         <Img fluid={props.data.services.childImageSharp.fluid} />
       </div>
       <div>
         <div className="container">
-          {data.reskill.edges.map(({ node }, i) => (
+          {data.hireIskillGrad.edges.map(({ node }, i) => (
             <div key={i}>
               <div className="row">
                 <div className="col-lg-6 col-md-6">
@@ -24,21 +24,6 @@ export default props => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="container" id="platform">
-          <div>Platform</div>
-          <div style={{ display: "flex", flexWrap: "wrap" }}>
-            <img src={ProjCycle} className="img-fluid" />
-            <div>
-              Lorem ipsum, or lipsum as it is sometimes known, is dummy text
-              used in laying out print, graphic or web designs. The passage is
-              attributed to an unknown typesetter. Lorem ipsum, or lipsum as it
-              is sometimes known, is dummy text used in laying out print,
-              graphic or web designs. The passage is attributed to an unknown
-              typesetter.
-            </div>
-          </div>
         </div>
       </div>
     </Layout>
@@ -62,8 +47,10 @@ export const query = graphql`
       }
     }
 
-    reskill: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//reskill/reskill[.]md/" } }
+    hireIskillGrad: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "//hire-iskill-grad/hire-iskill-grad[.]md/" }
+      }
     ) {
       edges {
         node {

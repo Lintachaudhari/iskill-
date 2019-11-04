@@ -50,7 +50,7 @@ const Header = ({ siteTitle }) => (
                 <Link to="/program" className="nav-link">
                   Program
                 </Link>
-                <Link to="/program" className="nav-link">
+                <Link to="/hire-iskill-grad" className="nav-link">
                   Hire a iSkyll Grad
                 </Link>
                 {/* <NavDropdown title="Services"className="iskyll-drop-down">
