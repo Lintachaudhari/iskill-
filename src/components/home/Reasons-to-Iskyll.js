@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import SkillsImg from "../../images/skills.jpg"
+import SkillsImg from "../../images/chooseSkylls.png"
 
 export default props => {
   return (
@@ -8,14 +8,14 @@ export default props => {
       <div
         style={{
           padding: "45px 0",
-          background:
-            "transparent linear-gradient(180deg, #D14D9B 0%, #2F479B 100%) 0% 0% no-repeat padding-box",
+          background:"#f6f7fb",
+          borderBottom:'1px solid #eaecf3'
         }}
       >
         <div className="container d-flex">
           <h3
             style={{
-              color: "#FFFFFF",
+              color: "#383651",
               //marginLeft: "150px",
               font: "Bold 45px/53px",
               marginTop:'2vw',

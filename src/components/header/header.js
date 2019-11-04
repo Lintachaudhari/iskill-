@@ -34,42 +34,36 @@ const Header = ({ siteTitle }) => (
     `}
     render={data => (
       <header className="bg-light fixed-top header-shadow">
-        <div className="container">
+        <div className="container-fluid">
           <Navbar bg="light" expand="lg">
             <Navbar.Brand>
               <Link to="/" style={{ color: `#0c2e8a`, textDecoration: `none` }}>
-                <img src={IskyllIcon} />
+                <img src={IskyllIcon} width="102" />
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="mr-auto">
-                <Link to="/" className="nav-link">
-                  Home
-                </Link>
+              <Nav className="ml-auto mr-5">
                 <Link to="/about_us" className="nav-link">
                   About Us
                 </Link>
                 <Link to="/program" className="nav-link">
-                  Porgram
+                  Program
                 </Link>
-                <NavDropdown title="Services">
-                  <NavDropdown.Item>
-                    <Link to="/services/#buildTeam"> Build Your Product</Link>
-                  </NavDropdown.Item>
-                  <NavDropdown.Item>
+                <Link to="/program" className="nav-link">
+                  Hire a iSkyll Grad
+                </Link>
+                {/* <NavDropdown title="Services"className="iskyll-drop-down">
+                     <Link to="/services/#buildTeam"> Build Your Product</Link>
                     <Link to="/services/#platform">Build Your Team</Link>
-                  </NavDropdown.Item>
-                  <NavDropdown.Item>
                     <Link to="/services/#getStarted">Hire Your Team</Link>
-                  </NavDropdown.Item>
-                </NavDropdown>
+                </NavDropdown> */}
                 <Link to="/reskyll" className="nav-link">
                   ReSkyll
                 </Link>
-                <Link to="/contact_us" className="nav-link">
+                {/* <Link to="/contact_us" className="nav-link">
                   Contact Us
-                </Link>
+                </Link> */}
               </Nav>
               <Form>
                 <Link to="/signup" style={{ color: `#0c2e8a` }}>

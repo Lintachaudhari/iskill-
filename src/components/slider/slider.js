@@ -42,7 +42,7 @@ const Slider_Component = () => (
     `}
     render={data => (
       <div>
-        <Carousel interval={3500} controls={false}>
+        <Carousel interval={350000} controls={false}>
           {data.banner.edges.map(({ node }, i) => (
             <Carousel.Item key={i}>
               <Link to={`/${slidePages[i]}`}>

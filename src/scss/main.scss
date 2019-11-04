@@ -181,7 +181,9 @@ table th {
 }
 
 .header-shadow {
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+  background-color: #fff;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.11);
 }
 
 .carousel-indicators li {
@@ -222,4 +224,8 @@ table th {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 9;
+}
+
+.carousel-caption{
+  background: transparent
 }

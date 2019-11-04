@@ -1,5 +1,6 @@
 $white:#fff;
-$secondary:#BC59A8;
+$secondary:#CC3F8E;
+$darkSecondary:#873576;
 
 
 .navbar-nav{
@@ -10,14 +11,19 @@ $secondary:#BC59A8;
     background-color: $secondary;
     border: 1px solid $secondary;
     color:$white;
-    border-radius: 3px;
+    padding: 5px 20px;
+    transition: background-color 400ms ease, opacity 400ms ease;
+}
+.fill-btn:hover{
+    background-color: $darkSecondary;
+    border: 1px solid $darkSecondary;
+    color:$white;
     padding: 5px 20px;
 }
 .outline-btn{
     background-color: $white;
     border: 1px solid $secondary;
     color:$secondary;
-    border-radius: 3px;
     padding: 5px 20px;
 }
 
@@ -31,4 +37,22 @@ $secondary:#BC59A8;
 .navbar-nav a:hover{
     color: $secondary;
     text-decoration: none;
+}
+
+.iskyll-drop-down .dropdown-menu a{
+    font-size: 14px;
+    font-weight: 100;
+    display: block;
+    padding: 10px 15px;
+    margin: 0;
+}
+
+.navbar.navbar-light .navbar-nav .nav-link{
+    color: #55596d;
+    font-weight: 100;
+    transition: background-color 400ms ease, opacity 400ms ease;
+}
+
+.navbar.navbar-light .navbar-nav .nav-link:hover{
+    color: #BC59A8;
 }

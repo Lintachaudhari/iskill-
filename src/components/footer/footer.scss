@@ -1,26 +1,71 @@
-.contact {
-    background: url(../../../src/images/irish-hands.jpg) no-repeat center;
-    background-size: cover;
-    position: relative;
+
+.footer-div {
+    width: 40%;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
 
-.contact-main{
-        background: rgba(0, 0, 0, 0.767); 
+.body-copy.footnote {
+    margin-top: 40px;
+    color: #55596d;
+    font-size: 14px;
+    text-align: center;
 }
-.contact-grid ,.slider-content p{
-    color:#fff !important;
-    font-size: 15px;
-    line-height: 1.8em;
-    letter-spacing: 1px;
-    padding-bottom: 10px;
-
-}
-
-
-.cpy-right-sec {
-    background: #1c1d21;
+.footer-list{
+    display: flex;
+    flex-direction: column;
 }
 
-.footer-text {
-    color:#fff;
+.footer-header {
+    margin-bottom: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-family: Lato, sans-serif;
+    color: #acb2cc;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    text-transform: none;
 }
+
+.footer-link {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-family: Lato, sans-serif;
+    color: #707486;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    text-transform: none;
+}
+
+.footer-link:hover {
+    color: #a2adbe;
+  }
+  
+  .footer-link:active {
+    opacity: 0.8;
+  }
+  
+  .footer-link.w--current {
+    opacity: 1;
+  }
+  
+  .footer-link.w--current:hover {
+    opacity: 0.8;
+  }
+  
+  .footer-link.w--current:active {
+    opacity: 0.7;
+    color: #32343a;
+  }
