@@ -1,6 +1,4 @@
 import React from "react"
-import BuildYourTeam from "../components/home/Build-your-team"
-import Button from "../components/utils/Button"
 import ProjCycle from "../images/proj-cycle.png"
 import Layout from "../components/layout/layout"
 import Img from "gatsby-image"
@@ -12,22 +10,21 @@ export default props => {
     <Layout>
       <SEO title="Re Skyll" />
       <div className="banner-set">
-        <div className="banner-title container">Re Skyll</div>
+        <div className="banner-title container">ReSkyll</div>
         <Img fluid={props.data.services.childImageSharp.fluid} />
       </div>
       <div style={{ margin: "25px 150px" }}>
         <div className="container">
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-          nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
-          sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-          rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
-          ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-          dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-          et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-          takimata sanctus est Lorem ipsum dolor sit amet
+          {data.reskill.edges.map(({ node }, i) => (
+            <div key={i}>
+              <div className="row">
+                <div className="col-lg-6 col-md-6">
+                  <div dangerouslySetInnerHTML={{ __html: node.html }} />
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-        <BuildYourTeam id="buildTeam"></BuildYourTeam>
 
         <div className="container" id="platform">
           <div>Platform</div>
@@ -43,17 +40,6 @@ export default props => {
             </div>
           </div>
         </div>
-        <Button
-          title="Sign Up"
-          backGroundColor="#BC59A8"
-          border="1px solid #BC59A8"
-          height="36px"
-          borderRadius="3px"
-          color="#ffffff"
-          opacity={1}
-          title="Get Started"
-          id="getStarted"
-        />
       </div>
     </Layout>
   )
@@ -72,6 +58,21 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    reskill: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "//reskill/reskill[.]md/" } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date
+          }
+          html
         }
       }
     }
