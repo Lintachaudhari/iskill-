@@ -7,6 +7,7 @@ import "./header.scss"
 import { Navbar, Nav, NavDropdown } from "react-bootstrap"
 import IskyllIcon from "../../images/isk.svg"
 import { Form } from "semantic-ui-react"
+import NavLink from "react-bootstrap/NavLink"
 
 const Header = ({ siteTitle }) => (
   <StaticQuery
@@ -50,9 +51,10 @@ const Header = ({ siteTitle }) => (
                 <Link to="/program" className="nav-link">
                   Program
                 </Link>
-                <Link to="/hire-iskill-grad" className="nav-link">
+                <Link to="/hire-iskill-grad" className="nav-link active">
                   Hire a iSkyll Grad
                 </Link>
+
                 {/* <NavDropdown title="Services"className="iskyll-drop-down">
                      <Link to="/services/#buildTeam"> Build Your Product</Link>
                     <Link to="/services/#platform">Build Your Team</Link>
