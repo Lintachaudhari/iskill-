@@ -6,7 +6,6 @@ import "bootstrap/dist/css/bootstrap.css"
 import "./header.scss"
 import { Navbar, Nav, NavDropdown } from "react-bootstrap"
 import IskyllIcon from "../../images/isk.svg"
-import Button from "../utils/Button"
 import { Form } from "semantic-ui-react"
 
 const Header = ({ siteTitle }) => (
@@ -45,9 +44,15 @@ const Header = ({ siteTitle }) => (
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <Link to="/" className='nav-link'>Home</Link>
-                <Link to="/about_us" className='nav-link'>About Us</Link>
-                <Link to="/program" className='nav-link'>Porgram</Link>
+                <Link to="/" className="nav-link">
+                  Home
+                </Link>
+                <Link to="/about_us" className="nav-link">
+                  About Us
+                </Link>
+                <Link to="/program" className="nav-link">
+                  Porgram
+                </Link>
                 <NavDropdown title="Services">
                   <NavDropdown.Item>
                     <Link to="/services/#buildTeam"> Build Your Product</Link>
@@ -59,8 +64,12 @@ const Header = ({ siteTitle }) => (
                     <Link to="/services/#getStarted">Hire Your Team</Link>
                   </NavDropdown.Item>
                 </NavDropdown>
-                <Link to="/reskyll" className='nav-link'>ReSkyll</Link>
-                <Link to="/contact_us" className='nav-link'>Contact Us</Link>
+                <Link to="/reskyll" className="nav-link">
+                  ReSkyll
+                </Link>
+                <Link to="/contact_us" className="nav-link">
+                  Contact Us
+                </Link>
               </Nav>
               <Form>
                 <Link to="/signup" style={{ color: `#0c2e8a` }}>
