@@ -31,16 +31,17 @@ export default mediaQuery
 
 // React hook for JS media queries
 export const useMediaQuery = cond => {
-  if (typeof window !== `undefined`) {
-    if (!mediaQuery[cond + `Js`])
-      throw `useMediaQuery's condition should be one of (min|max)(Phone|Phablet|Tablet|etc.)`
-    const query = window.matchMedia(mediaQuery[cond + `Js`])
-    const [match, setMatch] = useState(query.matches)
+  const query = window.matchMedia(mediaQuery[cond + `Js`])
+  const [match, setMatch] = useState(query.matches)
+  
     useEffect(() => {
+      if (!mediaQuery[cond + `Js`])
+        throw `useMediaQuery's condition should be one of (min|max)(Phone|Phablet|Tablet|etc.)`
       const handleMatch = q => setMatch(q.matches)
       query.addListener(handleMatch)
       return () => query.removeListener(handleMatch)
     })
+    if (typeof window !== `undefined`) {
     return match
   }
 }

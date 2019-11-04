@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Omniwyse`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `iSkyll`,
+    description: `iSkyll is a Smart Development Service combining top developers to build a successful product. iSkyll is a new standard in product development `,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -10,11 +10,19 @@ module.exports = {
       resolve: `gatsby-source-mongodb`,
       options: {
         dbName: `profile`,
-        collection: `studentData`,
+        collection: `students`,
         // server: { address: 'cluster0-vta7i.mongodb.net'},
         // auth: { user: `linta`, password: `linta123`},
         // extraParams: { replicaSet: 'cluster0', ssl: true, authSource: `admin`, retryWrites: true }
-      }  
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svgs/,
+        },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -23,6 +31,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {

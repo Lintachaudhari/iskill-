@@ -9,9 +9,9 @@ export default props => {
   const { data } = props
   return (
     <Layout>
-      <SEO title="About Us" />
+      <SEO title="Program" />
       <div className="banner-set">
-        <div className="banner-title container">About Us</div>
+        <div className="banner-title container">Program</div>
         <Img fluid={props.data.services.childImageSharp.fluid} />
       </div>
       <div style={{ margin: "25px 150px" }}>
