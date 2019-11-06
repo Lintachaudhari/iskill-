@@ -1,5 +1,5 @@
 import React from "react"
-import ProjCycle from "../images/proj-cycle.png"
+import { graphql } from "gatsby"
 import Layout from "../components/layout/layout"
 import Img from "gatsby-image"
 import SEO from "../components/seo"

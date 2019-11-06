@@ -1,10 +1,5 @@
 import React from "react"
-import ProjCycle from "../../images/proj-cycle.png"
 import NewIdeas from "../../images/new-ideas.png"
-import Button from "../utils/Button"
-import DesignIcon from "../../images/design.svg"
-import TeamIcon from "../../images/team.svg"
-import SelectionIcon from "../../images/selection.svg"
 
 export default () => {
   return (

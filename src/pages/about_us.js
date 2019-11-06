@@ -1,8 +1,8 @@
 import React from "react"
-import ProjCycle from "../images/proj-cycle.png"
 import Layout from "../components/layout/layout"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
+import { graphql } from 'gatsby'
 
 export default props => {
   console.log(props)

@@ -1,0 +1,36 @@
+input[type="text"], input[type="email"],textarea {
+    outline: none;
+    padding: 13px 15px;
+    font-size: 16px;
+    color: #777;
+    width: 100%;
+    min-height: 50px;
+    letter-spacing: 1px;
+    border: none;
+    background: #fff;
+    border-radius: 0px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    background: none;
+    background: #fff;
+}
+
+button.btn {
+    background: #FB4034;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 13px;
+    display: inline-block;
+    border-radius: 0;
+    min-height: 50px;
+}

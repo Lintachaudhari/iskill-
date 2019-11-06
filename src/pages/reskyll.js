@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import ProjCycle from "../images/proj-cycle.png"
 import Layout from "../components/layout/layout"
 import Img from "gatsby-image"

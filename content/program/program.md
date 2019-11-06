@@ -75,7 +75,7 @@ Assignments - 5
 Projects - 1
 </div>
 </div>
-
+<div class="module-inner d-flex"></div>
 <div class="module-inner">
 Module 5 - Database Fundamentals
 

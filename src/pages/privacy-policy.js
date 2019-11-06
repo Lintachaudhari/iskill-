@@ -1,7 +1,6 @@
 import React from "react"
-import BuildYourTeam from "../components/home/Build-your-team"
-import Button from "../components/utils/Button"
-import ProjCycle from "../images/proj-cycle.png"
+import { graphql } from "gatsby"
+
 import Layout from "../components/layout/layout"
 import Img from "gatsby-image"
 import SEO from "../components/seo"

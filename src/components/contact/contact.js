@@ -25,39 +25,41 @@ export default class Contact extends React.Component {
 
   render() {
     return (
+      <div className="container">
         <form onSubmit={this.handleSubmit}>
-            <div className="form-group">
-                <input className="form-control"
-                    type="text"
-                    placeholder="Name"
-                    name="name"
-                    value={this.state.name}
-                    onChange={this.handleInputChange}
-                />
-            </div>
-            <div className="form-group">
-                <input className="form-control"
-                    type="text"
-                    name="email"
-                    placeholder="Email"
-                    value={this.state.email}
-                    onChange={this.handleInputChange}
-                />
-            </div>
-            <div className="form-group">
-                <textarea className="form-control"
-                    type="text"
-                    name="message"
-                    placeholder="Message"
-                    value={this.state.message}
-                    onChange={this.handleInputChange}
-                />
-            </div>
-            <div>
-                <button className="form-control btn" type="submit">Submit</button>
-            </div>
-            
+          <div className="form-group">
+            <input className="form-control"
+              type="text"
+              placeholder="Name"
+              name="name"
+              value={this.state.name}
+              onChange={this.handleInputChange}
+            />
+          </div>
+          <div className="form-group">
+            <input className="form-control"
+              type="text"
+              name="email"
+              placeholder="Email"
+              value={this.state.email}
+              onChange={this.handleInputChange}
+            />
+          </div>
+          <div className="form-group">
+            <textarea className="form-control"
+              type="text"
+              name="message"
+              placeholder="Message"
+              value={this.state.message}
+              onChange={this.handleInputChange}
+            />
+          </div>
+          <div>
+            <button className="form-control btn" type="submit">Submit</button>
+          </div>
+
         </form>
+      </div>
     )
   }
 }

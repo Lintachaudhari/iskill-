@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import BuildYourTeam from "../components/home/Build-your-team"
 import Button from "../components/utils/Button"
 import ProjCycle from "../images/proj-cycle.png"

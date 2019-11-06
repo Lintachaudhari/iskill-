@@ -68,14 +68,9 @@ const Header = ({ siteTitle }) => (
                 </Link> */}
               </Nav>
               <Form>
-                <Link to="/signup" style={{ color: `#0c2e8a` }}>
-                  <button title="Sign Up" className="outline-btn">
-                    Sign Up
-                  </button>
-                </Link>
-                <Link to="/singin" style={{ color: `#FFFFFF` }}>
-                  <button title="Sign In" className="fill-btn ml-3">
-                    Sign In
+                <Link to="/apply" style={{ color: `#FFFFFF` }}>
+                  <button title="apply" className="fill-btn ml-3">
+                    Apply to iSkyll
                   </button>
                 </Link>
               </Form>
